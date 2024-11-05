@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +65,53 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+.main{
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.phone-screen{
+  border: 2px solid black;
+  width: 350px;
+  border-radius: 10px;
+}
+
+.phone-wrap{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.contact{
+  display: flex;
+  margin-left:10px ;
+}
+.Links{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.AddContact{
+  display: flex;
+  justify-content: center;
+}
+
+.formDiv{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.field{
+  display: flex;
+  gap: 5px;
+  margin: 5px;
+}
+.inputField{
+  width: 210px !important;
 }

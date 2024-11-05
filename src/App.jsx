@@ -1,12 +1,20 @@
 // import './App.css'
 
-function App() {
+import { Route, Routes } from "react-router-dom";
+import Contacts from "./Components/Contacts";
+import EditContact from "./Components/EditContact";
+import AddContact from "./Components/AddContact";
 
+function App() {
   return (
     <>
-     <h1>App</h1>
+      <Routes>
+        <Route path="/" element={<Contacts />} />
+        <Route path="/edit" element={<EditContact />} />
+        <Route path="/add" element={<AddContact />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
