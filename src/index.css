@@ -74,6 +74,7 @@ button:focus-visible {
 }
 
 .phone-screen{
+  
   border: 2px solid black;
   width: 350px;
   border-radius: 10px;
