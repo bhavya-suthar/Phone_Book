@@ -68,6 +68,7 @@ const AddContact = () => {
                   onChange={handleInput}
                   className="inputField"
                   placeholder="Name"
+                  required
                 />
               </Form.Group>
 
@@ -78,19 +79,21 @@ const AddContact = () => {
                   name="phone"
                   value={input.phone}
                   onChange={handleInput}
-                  type="text"
+                  type="number"
                   placeholder="Phone No."
+                  required
                 />
               </Form.Group>
               <Form.Group className="field">
                 <Form.Label column>email</Form.Label>
                 <Form.Control
-                  type="text"
+                  type="email"
                   name="email"
                   value={input.email}
                   onChange={handleInput}
                   className="inputField"
                   placeholder="email"
+                  required
                 />
               </Form.Group>
             </Form>
