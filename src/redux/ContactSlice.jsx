@@ -1,4 +1,5 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
+import EditContact from "../Components/EditContact";
 
 const initialState = {
   contacts: [],
@@ -18,8 +19,17 @@ const ContactSlice = createSlice({
       console.log("🚀 ~ state.contacts:", state.contacts);
       state.contacts = deletedData;
     },
+    EditContactSlice:(state,action)=>{
+      const {id,name,phone,email}= action.payload
+      const existingContact = state.contacts.find((con)=>con.id === id)
+      if(existingContact){
+        existingContact.name = name
+        existingContact.phone = phone
+        existingContact.email = email
+      }
+    }
   },
 });
 
-export const { addContact, deleteContact } = ContactSlice.actions;
+export const { addContact, deleteContact ,EditContactSlice} = ContactSlice.actions;
 export default ContactSlice.reducer;

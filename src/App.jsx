@@ -13,6 +13,7 @@ function App() {
         <Route path="/" element={<Contacts />} />
         <Route path="/edit" element={<EditContact />} />
         <Route path="/add" element={<AddContact />} />
+        <Route path="/add/:id" element={<AddContact />} />
         <Route path="/details/:id" element={<ContactDetails />} />
       </Routes>
     </>

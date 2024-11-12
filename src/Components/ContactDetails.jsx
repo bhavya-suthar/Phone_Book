@@ -27,7 +27,7 @@ const ContactDetails = () => {
     <div className="main">
       <div className="phone-screen">
         <div className="phone-wrap">
-          <h3>
+          <h3 className="text-white">
             {" "}
             <IoIosArrowBack
               style={{ cursor: "pointer"}}
@@ -35,20 +35,31 @@ const ContactDetails = () => {
             />
             Details
           </h3>
+          <Link
+                to={`/add/${id}`}
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                  fontSize: "20px",
+                }}
+              >
+                Edit
+              </Link>
+            
         </div>
-        <h5 className="d-flex justify-content-center">{findContact.name}</h5>
+        <h5 className="d-flex justify-content-center text-white" >{findContact.name}</h5>
         <div className="d-flex m-3 gap-2 align-items-start justify-content-between">
           {" "}
-          <div className="d-flex gap-3">
+          <div className="d-flex gap-3 text-white">
             {" "}
-            <h6> Phone No. :</h6>
+            <h6 className="text-white"> Phone No. :</h6>
             {findContact.phone}
           </div>
           {/* <a href="callto:+918238627119"> //when you want to call using skype app*/}
-          <div className="d-flex gap-2">
+          <div className="d-flex gap-2 text-white">
             <a
               href={`tel:+91${findContact.phone}`}
-              style={{ fontSize: "20px", color: "black" }}
+              style={{ fontSize: "20px", color: "white" }}
             >
               {" "}
               {/* when you want to call selected app  */}
@@ -56,20 +67,20 @@ const ContactDetails = () => {
             </a>
             <a
               href={`SMS:+91${findContact.phone}`}
-              style={{ fontSize: "20px", color: "black" }}
+              style={{ fontSize: "20px", color: "white" }}
             >
               <BiMessageRounded />{" "}
               {/* when you want to msg using selected app */}
             </a>
           </div>
         </div>
-        <div className="d-flex m-3 gap-2 align-items-start">
+        <div className="d-flex m-3 gap-2 align-items-start text-white">
           {" "}
           <h6> Email :</h6> {findContact.email}{" "}
         </div>
-        <h6 className="m-3">Call Logs</h6>
-        <h6 className="m-3">Not in groups</h6>
-        <h6 className="m-3">Default ringtone</h6>
+        <h6 className="m-3 text-white">Call Logs</h6>
+        <h6 className="m-3 text-white">Not in groups</h6>
+        <h6 className="m-3 text-white">Default ringtone</h6>
         <Link
           className="m-3"
           style={{ textDecoration: "none", color: "red" }}
