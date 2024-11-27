@@ -1,5 +1,5 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
-import EditContact from "../Components/EditContact";
+// import EditContact from "../Components/EditContact";
 
 const initialState = {
   contacts: [],
